@@ -10,7 +10,7 @@ async def get_shorten_url_by_short_code(short_code: str) -> dict:
 
 async def get_shorten_url_stats_by_short_code(short_code: str) -> str:
     model = await ShortenURLCRUD.get_model_by_short_code(short_code)
-    return model.short_code
+    return model.total_access
 
 
 async def create_shorten_url_model_in_database(data: dict) -> dict:
